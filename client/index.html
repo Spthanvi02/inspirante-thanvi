@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Event Registration Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGIN PAGE -->
+  <div id="loginPage">
+    <h1>College Event Registration Portal</h1>
+    <div class="form-box">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <p id="loginError" class="error"></p>
+    </div>
+  </div>
+
+  <!-- STUDENT DASHBOARD -->
+  <div id="studentDashboard" class="hidden">
+    <div class="header">
+      <h1>Student Dashboard</h1>
+      <button onclick="logout()">Logout</button>
+    </div>
+    <p>Welcome, <span id="studentName"></span></p>
+
+    <h2>Upcoming Events</h2>
+    <div id="eventsList"></div>
+
+    <h2>My Registrations</h2>
+    <div id="myRegistrations"></div>
+  </div>
+
+  <!-- ADMIN DASHBOARD -->
+  <div id="adminDashboard" class="hidden">
+    <div class="header">
+      <h1>Admin Dashboard</h1>
+      <button onclick="logout()">Logout</button>
+    </div>
+    <p>Welcome, <span id="adminName"></span></p>
+
+    <h2>Create New Event</h2>
+    <div class="form-box">
+      <input type="text" id="eventName" placeholder="Event Name" />
+      <input type="date" id="eventDate" />
+      <input type="text" id="eventVenue" placeholder="Venue" />
+      <input type="number" id="eventCapacity" placeholder="Capacity" />
+      <button onclick="addNewEvent()">Create Event</button>
+      <p id="createEventMsg" class="error"></p>
+    </div>
+
+    <h2>All Events</h2>
+    <div id="adminEventsList"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
