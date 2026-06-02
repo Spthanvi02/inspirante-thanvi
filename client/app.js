@@ -74,6 +74,9 @@ function logout() {
   token = null;
   userRole = null;
   userName = null;
+  document.getElementById('username').value = '';
+  document.getElementById('password').value = '';
+  document.getElementById('loginError').textContent = '';
   showPage('loginPage');
 }
 
@@ -100,10 +103,10 @@ async function loadStudentEvents() {
         <p>Venue: ${event.venue}</p>
         <p>Capacity: ${event.registeredCount}/${event.capacity}</p>
         ${isFull ? '<span class="full-badge">Full</span>' : ''}
-        <button 
-          onclick="registerForEvent('${event._id}')" 
-          ${isFull ? 'disabled' : ''}>
-          ${isFull ? 'Full' : 'Register'}
+        <button
+            onclick="registerForEvent('${event._id}')"
+            ${isFull ? 'disabled' : ''}>
+            Register
         </button>
         <p id="msg-${event._id}" class="error"></p>
       `;
