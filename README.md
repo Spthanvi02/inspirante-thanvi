@@ -1,5 +1,4 @@
-# inspirante-thanvi
-# College Event Portal
+# inspirante-thanvi - College Event Portal
 
 ## Overview
 
