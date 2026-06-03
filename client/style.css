@@ -126,7 +126,7 @@ button:disabled {
 }
 
 .event-card p {
-  color: #555;
+  color: #111;
   font-size: 20px;
   margin: 4px 0;
 }
@@ -155,7 +155,7 @@ button:disabled {
 .full-badge {
   background: red;
   color: white;
-  padding: 3px 10px;
+  padding: 10px 15px;
   border-radius: 4px;
   font-size: 13px;
   display: inline-block;
