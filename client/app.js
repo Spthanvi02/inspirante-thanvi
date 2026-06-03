@@ -247,6 +247,12 @@ async function addNewEvent() {
 
     msgEl.textContent = 'Event created successfully!';
     msgEl.className = 'success';
+
+    document.getElementById('eventName').value = '';
+    document.getElementById('eventDate').value = '';
+    document.getElementById('eventVenue').value = '';
+    document.getElementById('eventCapacity').value = '';
+    
     loadAdminEvents();
 
   } catch (error) {

@@ -106,7 +106,7 @@ button:disabled {
 
 .success {
   color: green;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .event-card {
@@ -173,23 +173,23 @@ button:disabled {
   display: none !important;
 }
 
-/* Custom styling to balance the Admin Dashboard layout */
+
 #adminDashboard {
   max-width: 1000px;
-  margin: 40px auto; /* Perfect horizontal centering on the screen */
+  margin: 40px auto; 
   padding: 0 20px;
 }
 
-/* Make sure the headings don't look completely squeezed to the left */
+
 #adminDashboard h2, 
 #adminDashboard h3, 
 #adminDashboard > p {
   text-align: left;
   margin-left: 5px;
-  color: #0f172a; /* Premium dark slate color */
+  color: #0f172a; 
 }
 
-/* Force the Form Box and the Event cards to take up the full neat center column width */
+
 #adminDashboard .form-box, 
 #adminDashboard #adminEventsList {
   width: 100%;
