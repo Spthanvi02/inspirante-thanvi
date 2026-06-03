@@ -3,7 +3,7 @@ const router = express.Router();
 const Event = require('../models/Event');
 const Registration = require('../models/Registration');
 const protect = require('../middleware/auth');
-
+// GET all events
 router.get('/', protect, async (req, res) => {
   try {
     const events = await Event.find().sort({ date: 1 });
@@ -23,7 +23,7 @@ router.get('/', protect, async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 });
-
+// POST create new event
 router.post('/', protect, async (req, res) => {
   if (req.user.role !== 'admin') {
     return res.status(403).json({ message: 'Only admins can create events' });
@@ -36,7 +36,7 @@ router.post('/', protect, async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 });
-
+// GET registrations for a specific event
 router.get('/:id/registrations', protect, async (req, res) => {
   if (req.user.role !== 'admin') {
     return res.status(403).json({ message: 'Only admins can view registrations' });
